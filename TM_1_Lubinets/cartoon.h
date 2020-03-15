@@ -11,5 +11,7 @@ class cartoon : public movie {
 public:
     void InData(ifstream& ifst); 
     void Out(ofstream& ofst); 
+    void Out_cartoon(ofstream& ofst);
+
 };
 

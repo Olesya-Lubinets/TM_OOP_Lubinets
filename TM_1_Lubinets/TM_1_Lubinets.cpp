@@ -19,7 +19,8 @@ int main(int argc, char* argv[]) {
     container c;
     c.In(ifst);
     ofst << "Filled container. " << endl<<endl;
-    c.Out(ofst);
+    //c.Out(ofst);
+    c.Out_cartoon(ofst);
     c.Clear();
     ofst << endl<<"Empty container. " << endl;
     cout << "Stop" << endl;

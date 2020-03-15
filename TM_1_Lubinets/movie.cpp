@@ -22,3 +22,6 @@ movie* movie::In(ifstream& ifst) {
     mv->InData(ifst);
     return mv;
 }
+ void movie::Out_cartoon(ofstream& ofst) {
+    ofst << endl;
+}

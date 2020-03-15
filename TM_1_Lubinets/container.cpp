@@ -24,6 +24,13 @@
         }                
     }
 
+    void container::Out_cartoon(ofstream& ofst) {
+        ofst << "Only cartoons." << endl;
+        for (int i = 0; i < len; i++) {
+            ofst << i << ": ";
+            cont[i]->Out_cartoon(ofst);
+        }
+    }
     container::container()
     {
         len = 0;     

@@ -37,3 +37,7 @@ void cartoon::Out(ofstream& ofst) {
     }
 }
 
+void cartoon::Out_cartoon(ofstream& ofst) {
+    Out(ofst);
+}
+
