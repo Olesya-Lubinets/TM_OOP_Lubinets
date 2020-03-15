@@ -12,7 +12,3 @@ void documentary::Out(ofstream& ofst)
     ofst << "Title: " << title << endl;
 }
 
-documentary::documentary()
-{
-    year_release = -1;
-}
