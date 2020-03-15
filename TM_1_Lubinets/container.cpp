@@ -6,7 +6,8 @@
         for (int i = 0; i < len; i++) 
         {
             ofst << i << ": ";
-            cont[i]->Out(ofst);      
+            cont[i]->Out(ofst); 
+            ofst << "Number of vowels: " << cont[i]->Count(ofst) << endl;
             ofst << endl;
         }
         

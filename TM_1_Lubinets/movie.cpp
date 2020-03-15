@@ -22,3 +22,19 @@ movie* movie::In(ifstream& ifst) {
     mv->InData(ifst);
     return mv;
 }
+
+int movie::Count(ofstream& ofst)
+{
+    int count = 0;
+    string vowels = "àîıåèûó¸şÿaeiouy" ;
+    for (int i = 0; i < title.length(); i++)
+    {
+        for(int k=0;k<vowels.length();k++)
+            if ((char)tolower(title[i]) == vowels[k])
+            {
+                count++;
+                break;
+            }
+    }
+    return count;
+}
