@@ -2,24 +2,24 @@ Filled container.
 
 Container contents 11 elements.
 0: CARTOON 
-Title: TITLE1
-It's a drawn cartoon
-Number of vowels: 2
-
-1: CARTOON 
-Title: TITLE2
-It's a plasticine cartoon
-Number of vowels: 2
-
-2: CARTOON 
-Title: TITLE3
+Title: TIIIIII
 It's a puppet cartoon
-Number of vowels: 2
+Number of vowels: 6
 
-3: FICTION MOVIE 
+1: FICTION MOVIE 
+Director: иванов
+Title: anna_karenina
+Number of vowels: 6
+
+2: FICTION MOVIE 
 Director: Иванов
 Title: Название
 Number of vowels: 4
+
+3: CARTOON 
+Title: TITLE1
+It's a drawn cartoon
+Number of vowels: 2
 
 4: FICTION MOVIE 
 Director: Петров
@@ -32,29 +32,29 @@ Title: TITLE6
 Number of vowels: 2
 
 6: CARTOON 
-Title: TITLE7
-It's a puppet cartoon
+Title: TITLE2
+It's a plasticine cartoon
 Number of vowels: 2
 
-7: FICTION MOVIE 
-Director: 88888
-Title: 88888
-Number of vowels: 0
-
-8: CARTOON 
+7: CARTOON 
 Title: TITLE8
 It's a drawn cartoon
 Number of vowels: 2
 
-9: CARTOON 
+8: CARTOON 
 Title: TITLE9
 It's a plasticine cartoon
 Number of vowels: 2
 
+9: CARTOON 
+Title: TITLE3
+It's a puppet cartoon
+Number of vowels: 2
+
 10: FICTION MOVIE 
-Director: иванов
-Title: anna_karenina
-Number of vowels: 6
+Director: 88888
+Title: 88888
+Number of vowels: 0
 
 
 Empty container. 

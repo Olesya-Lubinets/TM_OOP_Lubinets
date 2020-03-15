@@ -7,7 +7,7 @@
         {
             ofst << i << ": ";
             cont[i]->Out(ofst); 
-            ofst << "Number of vowels: " << cont[i]->Count(ofst) << endl;
+            ofst << "Number of vowels: " << cont[i]->Count() << endl;
             ofst << endl;
         }
         
@@ -24,6 +24,18 @@
           cont[i] = movie::In(ifst);
         }                
     }
+    void container::Sort() {
+        for (int i = 0; i < len - 1; i++) {
+            for (int j = i + 1; j < len; j++) {
+                if (cont[i]->Compare(*cont[j])) {
+                    movie* tmp = cont[i];
+                    cont[i] = cont[j];
+                    cont[j] = tmp;
+                }
+            }
+        }
+    }
+
 
     container::container()
     {

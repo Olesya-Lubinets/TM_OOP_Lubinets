@@ -23,7 +23,7 @@ movie* movie::In(ifstream& ifst) {
     return mv;
 }
 
-int movie::Count(ofstream& ofst)
+int movie::Count()
 {
     int count = 0;
     string vowels = "àîıåèûó¸şÿaeiouy" ;
@@ -37,4 +37,8 @@ int movie::Count(ofstream& ofst)
             }
     }
     return count;
+}
+
+bool movie::Compare(movie& other) {
+    return Count() < other.Count();
 }
