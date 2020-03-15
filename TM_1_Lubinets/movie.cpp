@@ -2,6 +2,7 @@
 #include "movie.h"
 #include "cartoon.h"
 #include "fiction.h"
+#include "Documentary.h"
 
 movie* movie::In(ifstream& ifst) {
     movie* mv;
@@ -14,6 +15,10 @@ movie* movie::In(ifstream& ifst) {
         break;
     case 2:    
         mv = new cartoon;
+        ifst >> mv->title;
+        break;
+    case 3:
+        mv = new documentary;
         ifst >> mv->title;
         break;
     default:

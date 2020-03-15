@@ -150,6 +150,7 @@
   <ItemGroup>
     <ClCompile Include="cartoon.cpp" />
     <ClCompile Include="container.cpp" />
+    <ClCompile Include="Documentary.cpp" />
     <ClCompile Include="fiction.cpp" />
     <ClCompile Include="movie.cpp" />
     <ClCompile Include="TM_1_Lubinets.cpp" />
@@ -157,6 +158,7 @@
   <ItemGroup>
     <ClInclude Include="cartoon.h" />
     <ClInclude Include="container.h" />
+    <ClInclude Include="Documentary.h" />
     <ClInclude Include="fiction.h" />
     <ClInclude Include="movie.h" />
   </ItemGroup>
