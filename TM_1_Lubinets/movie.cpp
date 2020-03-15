@@ -22,3 +22,12 @@ movie* movie::In(ifstream& ifst) {
     mv->InData(ifst);
     return mv;
 }
+
+void movie::Out_common(ofstream& ofst)
+{
+    ofst <<"Country of Origin: "<< country<<endl;
+}
+void movie::In_common(ifstream& ifst)
+{
+    ifst >> country;
+}

@@ -1,3 +1,20 @@
 Filled container. 
 
-Container contents 10 elements.
+Container contents 3 elements.
+0: CARTOON 
+Title: TITLE1
+It's a drawn cartoon
+Country of Origin: RUS
+
+1: CARTOON 
+Title: TITLE2
+It's a plasticine cartoon
+Country of Origin: USA
+
+2: CARTOON 
+Title: TITLE3
+It's a puppet cartoon
+Country of Origin: CANADA
+
+
+Empty container. 

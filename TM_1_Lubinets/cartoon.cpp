@@ -18,6 +18,7 @@ void cartoon::InData(ifstream& ifst) {
         cout<<"Incorrect way to create of cartoon";
         exit(1);
     }
+    In_common(ifst);
 }
 
 void cartoon::Out(ofstream& ofst) {
@@ -35,5 +36,6 @@ void cartoon::Out(ofstream& ofst) {
         ofst << "It's a plasticine cartoon" << endl;
         break;
     }
+   Out_common(ofst);
 }
 
