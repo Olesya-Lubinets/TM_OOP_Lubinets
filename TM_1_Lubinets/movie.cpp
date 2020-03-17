@@ -28,6 +28,26 @@ movie* movie::In(ifstream& ifst) {
     return mv;
 }
 
+int movie::Count()
+{
+    int count = 0;
+    string vowels = "àîıåèûó¸şÿaeiouy" ;
+    for (int i = 0; i < title.length(); i++)
+    {
+        for(int k=0;k<vowels.length();k++)
+            if ((char)tolower(title[i]) == vowels[k])
+            {
+                count++;
+                break;
+            }
+    }
+    return count;
+}
+
+bool movie::Compare(movie& other) {
+    return Count() < other.Count();
+}
+
 void movie::Out_common(ofstream& ofst)
 {
     ofst << "Title: " << title << endl;
