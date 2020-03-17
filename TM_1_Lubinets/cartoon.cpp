@@ -39,3 +39,7 @@ void cartoon::Out(ofstream& ofst) {
    Out_common(ofst);
 }
 
+void cartoon::Out_cartoon(ofstream& ofst) {
+    Out(ofst);
+}
+

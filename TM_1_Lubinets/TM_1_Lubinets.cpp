@@ -21,6 +21,8 @@ int main(int argc, char* argv[]) {
     ofst << "Filled container. " << endl<<endl;
     c.Sort();
     c.Out(ofst);
+    //c.Out(ofst);
+    c.Out_cartoon(ofst);
     c.Clear();
     ofst << endl<<"Empty container. " << endl;
     cout << "Stop" << endl;

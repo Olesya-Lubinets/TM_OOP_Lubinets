@@ -59,3 +59,6 @@ void movie::In_common(ifstream& ifst)
     ifst >> title;
     ifst >> country; 
 }
+ void movie::Out_cartoon(ofstream& ofst) {
+    ofst << endl;
+}
