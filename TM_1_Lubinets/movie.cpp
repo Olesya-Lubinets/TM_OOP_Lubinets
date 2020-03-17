@@ -11,15 +11,15 @@ movie* movie::In(ifstream& ifst) {
     switch (k) {
     case 1:    
         mv = new fiction;
-        ifst >> mv->title;
+        //ifst >> mv->title;
         break;
     case 2:    
         mv = new cartoon;
-        ifst >> mv->title;
+        //ifst >> mv->title;
         break;
     case 3:
         mv = new documentary;
-        ifst >> mv->title;
+      //  ifst >> mv->title;
         break;
     default:
         return 0;
@@ -30,9 +30,12 @@ movie* movie::In(ifstream& ifst) {
 
 void movie::Out_common(ofstream& ofst)
 {
+    ofst << "Title: " << title << endl;
     ofst <<"Country of Origin: "<< country<<endl;
+   
 }
 void movie::In_common(ifstream& ifst)
 {
-    ifst >> country;
+    ifst >> title;
+    ifst >> country; 
 }

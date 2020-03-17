@@ -2,6 +2,7 @@
 
 void cartoon::InData(ifstream& ifst) {
     int cartoon_type = 0;
+    In_common(ifst);
     ifst >> cartoon_type;
     switch (cartoon_type)
     {
@@ -18,12 +19,11 @@ void cartoon::InData(ifstream& ifst) {
         cout<<"Incorrect way to create of cartoon";
         exit(1);
     }
-    In_common(ifst);
+   
 }
 
 void cartoon::Out(ofstream& ofst) {
     ofst << "CARTOON " << endl;
-    ofst << "Title: " << title<<endl;
     switch (way) 
     {
     case 1:
