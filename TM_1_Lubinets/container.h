@@ -19,4 +19,5 @@ public:
     container(); // инициализация контейнера
     ~container() { Clear(); } // утилизация контейнера
     void Out_cartoon(ofstream& ofst);
+    void Out_filter(ofstream& ofst);
 };

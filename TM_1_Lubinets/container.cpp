@@ -1,7 +1,9 @@
 #include "container.h"
 
     void container::Out(ofstream& ofst) 
+        
     {
+   
         ofst << "Container contents " << len << " elements." << endl;
         for (int i = 0; i < len; i++) 
         {
@@ -13,16 +15,19 @@
         
     }
 
+   
+
     void container::In(ifstream& ifst)
     {
         ifst >> len;
+       
         if (len > max_len) {
             cout << " Invalid number of elements.";
-                exit(1);
+            exit(1);
         }
         for (int i = 0; i < len; i++) {
-          cont[i] = movie::In(ifst);
-        }                
+            cont[i] = movie::In(ifst);
+        }
     }
     void container::Sort() {
         for (int i = 0; i < len - 1; i++) {
@@ -44,6 +49,15 @@
             cont[i]->Out_cartoon(ofst);
         }
     }
+    void container::Out_filter(ofstream& ofst) {
+        ofst << "fiction+doc" << endl;
+        for (int i = 0; i < len; i++) {
+            ofst << i << ": ";
+            cont[i]->Out_group(ofst);
+        }
+    }
+
+
     container::container()
     {
         len = 0;     

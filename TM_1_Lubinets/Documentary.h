@@ -11,6 +11,10 @@ class documentary :public movie
     public:
     void InData(ifstream& ifst);
     void Out(ofstream& ofst);
+    void Out_group(ofstream& ofst);
+
+    int get_year() { return year_release; }
+    void set_year(int year) { year_release = year; }
 };
 
 

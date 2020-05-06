@@ -16,13 +16,14 @@ int main(int argc, char* argv[]) {
     ifstream ifst(argv[1]);
     ofstream ofst(argv[2]);
     cout << "Start" << endl;
+   
     container c;
     c.In(ifst);
     ofst << "Filled container. " << endl<<endl;
     c.Sort();
     c.Out(ofst);
-    //c.Out(ofst);
     c.Out_cartoon(ofst);
+    c.Out_filter(ofst);
     c.Clear();
     ofst << endl<<"Empty container. " << endl;
     cout << "Stop" << endl;

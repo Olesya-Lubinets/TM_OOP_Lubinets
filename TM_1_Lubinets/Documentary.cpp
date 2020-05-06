@@ -14,3 +14,8 @@ void documentary::Out(ofstream& ofst)
     Out_common(ofst);
 }
 
+void documentary::Out_group(ofstream& ofst)
+{
+    Out(ofst);
+}
+

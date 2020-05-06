@@ -1,0 +1,19 @@
+Container contents 3 elements.
+0: FICTION MOVIE 
+Director: Ivanov
+Title: Title#ab
+Country of Origin: RUS
+Number of vowels: 3
+
+1: CARTOON 
+It's a puppet cartoon
+Title: Title#a
+Country of Origin: USA
+Number of vowels: 3
+
+2: DOCUMENTARY MOVIE 
+Year of release: 2020
+Title: Title#ae
+Country of Origin: UK
+Number of vowels: 4
+

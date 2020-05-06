@@ -62,3 +62,7 @@ void movie::In_common(ifstream& ifst)
  void movie::Out_cartoon(ofstream& ofst) {
     ofst << endl;
 }
+
+ void movie::Out_group(ofstream& ofst) {
+     ofst << endl;
+ }

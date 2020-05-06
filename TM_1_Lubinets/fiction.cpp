@@ -18,3 +18,8 @@ fiction::fiction()
 {
     director = "Incorrect name!";
 }
+
+void fiction::Out_group(ofstream& ofst)
+{
+    Out(ofst);
+}

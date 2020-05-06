@@ -2,7 +2,7 @@
 1
 Title#ab
 RUS
-Èâàíîâ
+Ivanov
 2
 Title#a
 USA
