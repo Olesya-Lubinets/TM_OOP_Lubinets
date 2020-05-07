@@ -8,8 +8,12 @@
         for (int i = 0; i < len; i++) 
         {
             ofst << i << ": ";
-            cont[i]->Out(ofst); 
-            ofst << "Number of vowels: " << cont[i]->Count() << endl;
+            if(cont[i]==NULL)
+            ofst << "Incorrect data" << endl;
+            else {
+                cont[i]->Out(ofst);
+                ofst << "Number of vowels: " << cont[i]->Count() << endl;
+            }
             ofst << endl;
         }
         
@@ -22,8 +26,8 @@
         ifst >> len;
        
         if (len > max_len) {
-            cout << " Invalid number of elements.";
-            exit(1);
+            cout << "100 records will be processed";
+            len = 100;
         }
         for (int i = 0; i < len; i++) {
             cont[i] = movie::In(ifst);
@@ -46,14 +50,20 @@
         ofst << "Only cartoons." << endl;
         for (int i = 0; i < len; i++) {
             ofst << i << ": ";
-            cont[i]->Out_cartoon(ofst);
+            if (cont[i] != NULL)
+                cont[i]->Out_cartoon(ofst);
+            else
+                ofst << endl;
         }
     }
     void container::Out_filter(ofstream& ofst) {
-        ofst << "fiction+doc" << endl;
+        ofst << endl<<"fiction+doc" << endl;
         for (int i = 0; i < len; i++) {
             ofst << i << ": ";
+            if (cont[i] != NULL)
             cont[i]->Out_group(ofst);
+            else
+                ofst << endl;
         }
     }
 

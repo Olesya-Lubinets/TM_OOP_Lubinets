@@ -8,7 +8,7 @@ using namespace std;
 class fiction : public movie {
     string director; 
 public:
-    void InData(ifstream& ifst); // ввод
+    bool InData(ifstream& ifst); // ввод
     void Out(ofstream& ofst); // вывод
     fiction(); 
     void Out_group(ofstream& ofst);

@@ -9,7 +9,7 @@ class documentary :public movie
 {
     int year_release;
     public:
-    void InData(ifstream& ifst);
+    bool InData(ifstream& ifst);
     void Out(ofstream& ofst);
     void Out_group(ofstream& ofst);
 

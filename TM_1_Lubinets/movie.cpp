@@ -3,29 +3,48 @@
 #include "cartoon.h"
 #include "fiction.h"
 #include "Documentary.h"
+#include <string>
 
 movie* movie::In(ifstream& ifst) {
     movie* mv;
     int k;
-    ifst >> k;  
+    string temp;
+    string waste;
+    ifst >> temp;
+    if (temp.length() != 1)
+    {
+        ifst.ignore();
+        for (int i = 0; i < 3; i++) {
+            getline(ifst, waste, '\n');
+        }
+        return NULL;
+    }
+    if (isdigit((unsigned char)temp.front()) == 0) {
+        ifst.ignore();
+        for (int i = 0; i < 3; i++)
+        {
+            getline(ifst, waste, '\n');
+        }
+        return NULL;
+    }
+    k = stoi(temp);
     switch (k) {
     case 1:    
         mv = new fiction;
-        //ifst >> mv->title;
         break;
     case 2:    
         mv = new cartoon;
-        //ifst >> mv->title;
         break;
     case 3:
         mv = new documentary;
-      //  ifst >> mv->title;
         break;
     default:
-        return 0;
+        return NULL;
     }
-    mv->InData(ifst);
-    return mv;
+    if (!(mv->InData(ifst)))
+        return NULL;
+   else
+   return mv;
 }
 
 int movie::Count()
@@ -45,6 +64,7 @@ int movie::Count()
 }
 
 bool movie::Compare(movie& other) {
+    if (this == NULL || &other == NULL) { return false; }
     return Count() < other.Count();
 }
 
@@ -54,10 +74,30 @@ void movie::Out_common(ofstream& ofst)
     ofst <<"Country of Origin: "<< country<<endl;
    
 }
-void movie::In_common(ifstream& ifst)
+bool movie::In_common(ifstream& ifst)
 {
-    ifst >> title;
-    ifst >> country; 
+    string temp;
+    string waste;
+    ifst.ignore();
+    getline(ifst, temp, '\n');
+    if ((temp) == "\0")
+    {
+        for (int i = 0; i < 2; i++) {
+            getline(ifst, waste, '\n');
+        }
+        return NULL;
+    }
+     title = temp;
+    getline(ifst, temp, '\n');
+    if ((temp) == "\0")
+    {
+        for (int i = 0; i < 1; i++) {
+            getline(ifst, waste, '\n');
+        }
+        return NULL;
+    }
+     country = temp;
+    return true;
 }
  void movie::Out_cartoon(ofstream& ofst) {
     ofst << endl;

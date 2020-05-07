@@ -1,23 +1,34 @@
 #include "cartoon.h"
+#include <string>
 
-void cartoon::InData(ifstream& ifst) {
+bool cartoon::InData(ifstream& ifst) {
     int cartoon_type = 0;
-    In_common(ifst);
-    ifst >> cartoon_type;
+    if (!In_common(ifst)) { return false; };
+    string temp;
+    ifst >> temp;
+    if (temp.length() != 1)
+    {
+        return false;
+    }
+    if (isdigit(temp[0]) == 0)
+    {
+        return false;
+    }
+
+    cartoon_type = std::stoi(temp);
     switch (cartoon_type)
     {
     case 1: 
         way = DRAWN;
-        break;
+        return true;
     case 2:
         way =PUPPET;
-        break;
+        return true;
     case 3:
         way =PLASTICINE;
-        break;
+        return true;
     default:
-        cout<<"Incorrect way to create of cartoon";
-        exit(1);
+        return false;
     }
    
 }

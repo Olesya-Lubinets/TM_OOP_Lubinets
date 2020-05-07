@@ -1,10 +1,17 @@
 #include "fiction.h"
+#include <string>
 
-void fiction::InData(ifstream& ifst)
+bool fiction::InData(ifstream& ifst)
 {
-    In_common(ifst);
-    ifst >> director;
-    
+    if (!In_common(ifst)) { return false; };
+    string temp ;
+    getline(ifst, temp, '\n');
+    if ((temp) == "\0")
+    {
+        return false;
+    }
+    director = temp; 
+    return true;
 }
 
 void fiction::Out(ofstream& ofst) 

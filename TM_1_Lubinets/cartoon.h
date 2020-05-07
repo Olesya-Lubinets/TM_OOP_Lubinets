@@ -9,7 +9,7 @@ class cartoon : public movie {
     
    
 public:
-    void InData(ifstream& ifst); 
+    bool InData(ifstream& ifst); 
     void Out(ofstream& ofst); 
     void Out_cartoon(ofstream& ofst);
     enum Way_create { DRAWN = 1, PUPPET, PLASTICINE, };

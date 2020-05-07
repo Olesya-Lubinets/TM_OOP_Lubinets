@@ -1,40 +1,62 @@
 Filled container. 
 
-Container contents 3 elements.
-0: DOCUMENTARY MOVIE 
+Container contents 10 elements.
+0: Incorrect data
+
+1: DOCUMENTARY MOVIE 
 Year of release: 2020
 Title: Title#ae
 Country of Origin: UK
 Number of vowels: 4
 
-1: CARTOON 
+2: CARTOON 
 It's a puppet cartoon
-Title: Title#a
+Title: Title
 Country of Origin: USA
-Number of vowels: 3
+Number of vowels: 2
 
-2: FICTION MOVIE 
-Director: Èâàíîâ
-Title: Title#ab
-Country of Origin: RUS
-Number of vowels: 3
+3: Incorrect data
+
+4: Incorrect data
+
+5: Incorrect data
+
+6: Incorrect data
+
+7: Incorrect data
+
+8: Incorrect data
+
+9: Incorrect data
 
 Only cartoons.
 0: 
-1: CARTOON 
+1: 
+2: CARTOON 
 It's a puppet cartoon
-Title: Title#a
+Title: Title
 Country of Origin: USA
-2: 
+3: 
+4: 
+5: 
+6: 
+7: 
+8: 
+9: 
+
 fiction+doc
-0: DOCUMENTARY MOVIE 
+0: 
+1: DOCUMENTARY MOVIE 
 Year of release: 2020
 Title: Title#ae
 Country of Origin: UK
-1: 
-2: FICTION MOVIE 
-Director: Èâàíîâ
-Title: Title#ab
-Country of Origin: RUS
+2: 
+3: 
+4: 
+5: 
+6: 
+7: 
+8: 
+9: 
 
 Empty container. 

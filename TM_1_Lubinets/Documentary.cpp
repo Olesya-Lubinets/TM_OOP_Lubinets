@@ -1,10 +1,19 @@
 #include "Documentary.h"
+#include <string>
 
-void documentary::InData(ifstream& ifst)
+bool documentary::InData(ifstream& ifst)
 {
-    In_common(ifst);
-    ifst >> year_release;
-    
+    if (!In_common(ifst)) { return false; };
+    string temp;
+    ifst >> temp;
+    if (temp.length() != 4) { return false; }
+    for (int i = 0; i < 4; i++)
+    {
+        if (!isdigit(temp[i]))
+            return false;
+    }
+    year_release = stoi(temp);
+    return true; 
 }
 
 void documentary::Out(ofstream& ofst)
