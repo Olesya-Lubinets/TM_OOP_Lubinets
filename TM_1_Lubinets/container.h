@@ -1,23 +1,26 @@
-#pragma once
-#define max_len 100
+#ifndef CONTAINER_H
+#define CONTAINER_H
+
 #include <iostream>
 #include <fstream>
-
 #include "movie.h"
-
 using namespace std;
+#define max_len 100
 
-class container {
-    
-    int len; // текущая длина
-    movie* cont[max_len];
-public:
-    void In(ifstream& ifst); // ввод
-    void Out(ofstream& ofst); // вывод
-    void Clear(); // очистка контейнера от фигур
-    void Sort();
-    container(); // инициализация контейнера
-    ~container() { Clear(); } // утилизация контейнера
-    void Out_cartoon(ofstream& ofst);
-    void Out_filter(ofstream& ofst);
+class Container {
+ public:
+  void In(ifstream& ifst);  // Ввод
+  void Out(ofstream& ofst);  // Вывод
+  void Clear();  // Очистка контейнера от фигур
+  void Sort();
+  Container() { len_ = 0; }  // Инициализация контейнера
+  ~Container() { Clear(); }  // Утилизация контейнера
+  void OutCartoon(ofstream& ofst);
+  void OutFilter(ofstream& ofst);
+
+ protected:
+  int len_;  // Текущая длина
+  Movie* cont_[max_len];
 };
+
+#endif

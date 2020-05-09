@@ -1,12 +1,8 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
-
 #include "container.h"
 using namespace std;
 
-   
- 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         cout << "incorrect command line! "
@@ -14,22 +10,20 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
     ifstream ifst(argv[1]);
-    if (!ifst.is_open())
-    {
+    if (!ifst.is_open()) {
         cout << "No input file found or could not open!" << endl;
         system("pause");
         return 1;
     }
     ofstream ofst(argv[2]);
     cout << "Start" << endl;
-   
-    container c;
+    Container c;
     c.In(ifst);
     ofst << "Filled container. " << endl<<endl;
     c.Sort();
     c.Out(ofst);
-    c.Out_cartoon(ofst);
-    c.Out_filter(ofst);
+    c.OutCartoon(ofst);
+    c.OutFilter(ofst);
     c.Clear();
     ofst << endl<<"Empty container. " << endl;
     cout << "Stop" << endl;

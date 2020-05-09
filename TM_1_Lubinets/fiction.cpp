@@ -1,32 +1,20 @@
 #include "fiction.h"
-#include <string>
 
-bool fiction::InData(ifstream& ifst)
-{
-    if (!In_common(ifst)) { return false; };
+bool Fiction::InData(ifstream& ifst) {
+    if (!InCommon(ifst)) return false;
     string temp ;
     getline(ifst, temp, '\n');
-    if ((temp) == "\0")
-    {
-        return false;
-    }
-    director = temp; 
+    if ((temp) == "\0") return false;
+    director_ = temp; 
     return true;
 }
 
-void fiction::Out(ofstream& ofst) 
-{
+void Fiction::Out(ofstream& ofst) {
     ofst << "FICTION MOVIE "<<endl;
-    ofst << "Director: "<< director << endl;
-    Out_common(ofst);
+    ofst << "Director: "<< director_ << endl;
+    OutCommon(ofst);
 }
 
-fiction::fiction()
-{
-    director = "Incorrect name!";
-}
 
-void fiction::Out_group(ofstream& ofst)
-{
-    Out(ofst);
-}
+
+

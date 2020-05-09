@@ -1,18 +1,23 @@
-#pragma once
+#ifndef FICTION_H
+#define FICTION_H
+
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "movie.h"
-
 using namespace std;
 
-class fiction : public movie {
-    string director; 
-public:
-    bool InData(ifstream& ifst); // ввод
-    void Out(ofstream& ofst); // вывод
-    fiction(); 
-    void Out_group(ofstream& ofst);
+class Fiction : public Movie {
+ public:
+  string GetDirector() { return director_; }
+  void SetDirector(string dir) { director_ = dir; }
+  bool InData(ifstream& ifst);  // Ввод
+  void Out(ofstream& ofst);  // Вывод
+  Fiction() { director_ = "Incorrect name!"; }
+  void OutGroup(ofstream& ofst) { Out(ofst); }
 
-    string get_director() { return director; }
-    void set_director(string dir) { director = dir; }
+ protected:
+  string director_;
 };
+
+#endif

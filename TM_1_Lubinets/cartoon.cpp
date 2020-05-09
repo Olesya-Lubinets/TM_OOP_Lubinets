@@ -1,42 +1,30 @@
 #include "cartoon.h"
-#include <string>
 
-bool cartoon::InData(ifstream& ifst) {
-    int cartoon_type = 0;
-    if (!In_common(ifst)) { return false; };
+bool Cartoon::InData(ifstream& ifst) {
+    if (!InCommon(ifst)) return false;
     string temp;
     ifst >> temp;
-    if (temp.length() != 1)
-    {
-        return false;
-    }
-    if (isdigit(temp[0]) == 0)
-    {
-        return false;
-    }
-
-    cartoon_type = std::stoi(temp);
-    switch (cartoon_type)
-    {
+    if (temp.length() != 1) return false;
+    if (isdigit(temp[0]) == 0) return false;
+    int cartoon_type = std::stoi(temp);
+    switch (cartoon_type){
     case 1: 
-        way = DRAWN;
+        way_ = DRAWN;
         return true;
     case 2:
-        way =PUPPET;
+        way_ = PUPPET;
         return true;
     case 3:
-        way =PLASTICINE;
+        way_ = PLASTICINE;
         return true;
     default:
         return false;
-    }
-   
+    } 
 }
 
-void cartoon::Out(ofstream& ofst) {
+void Cartoon::Out(ofstream& ofst) {
     ofst << "CARTOON " << endl;
-    switch (way) 
-    {
+    switch (way_) {
     case 1:
         ofst << "It's a drawn cartoon" << endl;
         break;
@@ -47,10 +35,5 @@ void cartoon::Out(ofstream& ofst) {
         ofst << "It's a plasticine cartoon" << endl;
         break;
     }
-   Out_common(ofst);
+   OutCommon(ofst);
 }
-
-void cartoon::Out_cartoon(ofstream& ofst) {
-    Out(ofst);
-}
-

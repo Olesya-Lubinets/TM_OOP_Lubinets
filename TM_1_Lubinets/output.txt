@@ -1,7 +1,11 @@
 Filled container. 
 
-Container contents 10 elements.
-0: Incorrect data
+Container contents 6 elements.
+0: FICTION MOVIE 
+Director: Петров
+Title: Title#aee
+Country of Origin: CAN
+Number of vowels: 5
 
 1: DOCUMENTARY MOVIE 
 Year of release: 2020
@@ -10,53 +14,61 @@ Country of Origin: UK
 Number of vowels: 4
 
 2: CARTOON 
+It's a drawn cartoon
+Title: Title#aweqrt
+Country of Origin: FRA
+Number of vowels: 4
+
+3: DOCUMENTARY MOVIE 
+Year of release: 2005
+Title: Title#aetw
+Country of Origin: ITA
+Number of vowels: 4
+
+4: FICTION MOVIE 
+Director: Иванов
+Title: Title#ab
+Country of Origin: RUS
+Number of vowels: 3
+
+5: CARTOON 
 It's a puppet cartoon
-Title: Title
+Title: Title#a
 Country of Origin: USA
-Number of vowels: 2
-
-3: Incorrect data
-
-4: Incorrect data
-
-5: Incorrect data
-
-6: Incorrect data
-
-7: Incorrect data
-
-8: Incorrect data
-
-9: Incorrect data
+Number of vowels: 3
 
 Only cartoons.
 0: 
 1: 
 2: CARTOON 
-It's a puppet cartoon
-Title: Title
-Country of Origin: USA
+It's a drawn cartoon
+Title: Title#aweqrt
+Country of Origin: FRA
 3: 
 4: 
-5: 
-6: 
-7: 
-8: 
-9: 
+5: CARTOON 
+It's a puppet cartoon
+Title: Title#a
+Country of Origin: USA
 
 fiction+doc
-0: 
+0: FICTION MOVIE 
+Director: Петров
+Title: Title#aee
+Country of Origin: CAN
 1: DOCUMENTARY MOVIE 
 Year of release: 2020
 Title: Title#ae
 Country of Origin: UK
 2: 
-3: 
-4: 
+3: DOCUMENTARY MOVIE 
+Year of release: 2005
+Title: Title#aetw
+Country of Origin: ITA
+4: FICTION MOVIE 
+Director: Иванов
+Title: Title#ab
+Country of Origin: RUS
 5: 
-6: 
-7: 
-8: 
-9: 
 
 Empty container. 

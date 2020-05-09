@@ -1,28 +1,30 @@
-#pragma once
+#ifndef MOVIE_H
+#define MOVIE_H 
+
 #include <iostream>
 #include <fstream>
-
+#include <string>
 using namespace std;
 
-class movie {
-protected:
-    string title;  
-    string country;
-public: 
-    static movie* In(ifstream& ifst);
-    virtual bool InData(ifstream& ifst) = 0;
-    virtual void Out(ofstream& ofst) = 0;  
-    virtual void Out_cartoon(ofstream& ofst);
-    int Count();
-    bool Compare(movie& other);
-    void Out_common(ofstream& ofst);
-    bool In_common(ifstream& ifst);
-   virtual void Out_group(ofstream& ofst);
-   
-   string get_title() { return title; }
-   string get_country() { return country; }
-   void set_title(string tit) { title = tit; }
-   void set_country(string con) { country = con; }
+class Movie {
+ public:
+  string GetTitle() { return title_; }
+  string GetCountry() { return country_; }
+  void SetTitle(string tit) { title_ = tit; }
+  void SetCountry(string con) { country_ = con; }  
+  static Movie* In(ifstream& ifst);
+  virtual bool InData(ifstream& ifst) = 0;
+  virtual void Out(ofstream& ofst) = 0;
+  virtual void OutCartoon(ofstream& ofst) { ofst << endl; }
+  int Count();
+  bool Compare(Movie& other);
+  void OutCommon(ofstream& ofst);
+  bool InCommon(ifstream& ifst);
+  virtual void OutGroup(ofstream& ofst) { ofst << endl; }
 
+ protected:
+  string title_;
+  string country_;
 };
 
+#endif

@@ -1,108 +1,91 @@
-
 #include "movie.h"
 #include "cartoon.h"
 #include "fiction.h"
 #include "Documentary.h"
-#include <string>
 
-movie* movie::In(ifstream& ifst) {
-    movie* mv;
-    int k;
+Movie* Movie::In(ifstream& ifst) {
     string temp;
     string waste;
     ifst >> temp;
-    if (temp.length() != 1)
-    {
+    if (temp.length() != 1) {
         ifst.ignore();
         for (int i = 0; i < 3; i++) {
             getline(ifst, waste, '\n');
         }
-        return NULL;
+        return nullptr;
     }
     if (isdigit((unsigned char)temp.front()) == 0) {
         ifst.ignore();
-        for (int i = 0; i < 3; i++)
-        {
+        for (int i = 0; i < 3; i++) {
             getline(ifst, waste, '\n');
         }
-        return NULL;
+        return nullptr;
     }
-    k = stoi(temp);
+    int k = stoi(temp);
+    Movie* mv;
     switch (k) {
     case 1:    
-        mv = new fiction;
+        mv = new Fiction;
         break;
     case 2:    
-        mv = new cartoon;
+        mv = new Cartoon;
         break;
     case 3:
-        mv = new documentary;
+        mv = new Documentary;
         break;
     default:
-        return NULL;
+      return nullptr;
     }
-    if (!(mv->InData(ifst)))
-        return NULL;
-   else
-   return mv;
+    if (!(mv->InData(ifst))) {
+      return nullptr;
+    } else {
+      return mv;
+    }
 }
 
-int movie::Count()
-{
+int Movie::Count() {
     int count = 0;
     string vowels = "àîýåèûó¸þÿaeiouy" ;
-    for (int i = 0; i < title.length(); i++)
-    {
-        for(int k=0;k<vowels.length();k++)
-            if ((char)tolower(title[i]) == vowels[k])
-            {
-                count++;
-                break;
-            }
+    for (int i = 0; i < title_.length(); i++) {
+      for (int k = 0; k < vowels.length(); k++) {
+        if ((char)tolower(title_[i]) == vowels[k]) {
+          count++;
+          break;
+        }
+      }
     }
     return count;
 }
 
-bool movie::Compare(movie& other) {
-    if (this == NULL || &other == NULL) { return false; }
+bool Movie::Compare(Movie& other) {
+  if (this == NULL || &other == nullptr) return false;
     return Count() < other.Count();
 }
 
-void movie::Out_common(ofstream& ofst)
-{
-    ofst << "Title: " << title << endl;
-    ofst <<"Country of Origin: "<< country<<endl;
-   
+void Movie::OutCommon(ofstream& ofst) {
+    ofst << "Title: " << title_ << endl;
+    ofst <<"Country of Origin: "<< country_<<endl;  
 }
-bool movie::In_common(ifstream& ifst)
-{
+
+bool Movie::InCommon(ifstream& ifst) {
     string temp;
     string waste;
     ifst.ignore();
     getline(ifst, temp, '\n');
-    if ((temp) == "\0")
-    {
+    if ((temp) == "\0") {
         for (int i = 0; i < 2; i++) {
             getline(ifst, waste, '\n');
         }
-        return NULL;
+        return false;
     }
-     title = temp;
+    title_ = temp;
     getline(ifst, temp, '\n');
-    if ((temp) == "\0")
-    {
+    if ((temp) == "\0") {
         for (int i = 0; i < 1; i++) {
             getline(ifst, waste, '\n');
         }
-        return NULL;
+        return false;
     }
-     country = temp;
+    country_ = temp;
     return true;
 }
- void movie::Out_cartoon(ofstream& ofst) {
-    ofst << endl;
-}
-
- void movie::Out_group(ofstream& ofst) {
-     ofst << endl;
- }
