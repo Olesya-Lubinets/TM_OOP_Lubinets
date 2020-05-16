@@ -20,6 +20,7 @@ int main(int argc, char* argv[]) {
     c.In(ifst);
     ofst << "Filled container. " << endl<<endl;
     c.Out(ofst);
+    c.MultiMethod(ofst);
     c.Clear();
     ofst << endl<<"Empty container. " << endl;
     cout << "Stop" << endl;

@@ -17,4 +17,5 @@ public:
     void Clear(); // очистка контейнера от фигур
     container(); // инициализация контейнера
     ~container() { Clear(); } // утилизация контейнера
+    void MultiMethod(ofstream& ofst);
 };

@@ -10,5 +10,8 @@ class fiction : public movie {
 public:
     void InData(ifstream& ifst); // ввод
     void Out(ofstream& ofst); // вывод
+    void MultiMethod(movie* other, ofstream& ofst) ;
+    void MMCartoon(ofstream& ofst) ;
+    void MMFiction(ofstream& ofst);
     fiction(); 
 };

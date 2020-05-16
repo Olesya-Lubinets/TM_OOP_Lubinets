@@ -1,3 +1,76 @@
 Filled container. 
 
-Container contents 10 elements.
+Container contents 4 elements.
+0: CARTOON 
+Title: TITLE1
+It's a drawn cartoon
+
+1: FICTION MOVIE 
+Director: Иванов
+Title: TITLE4
+
+2: CARTOON 
+Title: TITLE3
+It's a puppet cartoon
+
+3: FICTION MOVIE 
+Director: Петров
+Title: TITLE5
+
+Multimethod.
+
+Cartoon and Fiction
+
+CARTOON 
+Title: TITLE1
+It's a drawn cartoon
+FICTION MOVIE 
+Director: Иванов
+Title: TITLE4
+
+Cartoon and Cartoon
+
+CARTOON 
+Title: TITLE1
+It's a drawn cartoon
+CARTOON 
+Title: TITLE3
+It's a puppet cartoon
+
+Cartoon and Fiction
+
+CARTOON 
+Title: TITLE1
+It's a drawn cartoon
+FICTION MOVIE 
+Director: Петров
+Title: TITLE5
+
+Fiction and Cartoon
+
+FICTION MOVIE 
+Director: Иванов
+Title: TITLE4
+CARTOON 
+Title: TITLE3
+It's a puppet cartoon
+
+Fiction and Fiction
+
+FICTION MOVIE 
+Director: Иванов
+Title: TITLE4
+FICTION MOVIE 
+Director: Петров
+Title: TITLE5
+
+Cartoon and Fiction
+
+CARTOON 
+Title: TITLE3
+It's a puppet cartoon
+FICTION MOVIE 
+Director: Петров
+Title: TITLE5
+
+Empty container. 

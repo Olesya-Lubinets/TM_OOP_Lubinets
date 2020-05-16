@@ -37,3 +37,14 @@ void cartoon::Out(ofstream& ofst) {
     }
 }
 
+void cartoon::MultiMethod(movie* other, ofstream& ofst) {
+  other->MMCartoon(ofst);
+}
+
+void cartoon::MMCartoon(ofstream& ofst) {
+  ofst << endl << "Cartoon and Cartoon" << endl;
+}
+
+void cartoon::MMFiction(ofstream& ofst) {
+  ofst << endl << "Fiction and Cartoon" << endl;
+}

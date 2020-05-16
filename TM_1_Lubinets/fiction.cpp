@@ -16,3 +16,15 @@ fiction::fiction()
 {
     director = "Incorrect name!";
 }
+
+void fiction::MultiMethod(movie* other, ofstream& ofst) {
+  other->MMFiction(ofst);
+}
+
+void fiction::MMCartoon(ofstream& ofst) {
+  ofst << endl << "Cartoon and Fiction" << endl;
+}
+
+void fiction::MMFiction(ofstream& ofst) {
+  ofst << endl << "Fiction and Fiction" << endl;
+}

@@ -11,5 +11,8 @@ class cartoon : public movie {
 public:
     void InData(ifstream& ifst); 
     void Out(ofstream& ofst); 
+    void MultiMethod(movie* other, ofstream& ofst);
+    void MMCartoon(ofstream& ofst);
+    void MMFiction(ofstream& ofst);
 };
 
