@@ -18,4 +18,19 @@ void Documentary::Out(ofstream& ofst) {
     OutCommon(ofst);
 }
 
+void Documentary::MultiMethod(Movie* other, ofstream& ofst) {
+  other->MMDocumentary(ofst);
+}
+
+void Documentary::MMCartoon(ofstream& ofst) {
+  ofst << endl << "Cartoon and Documentary" << endl;
+}
+
+void Documentary::MMFiction(ofstream& ofst) {
+  ofst << endl << "Fiction and Documentary" << endl;
+}
+
+void Documentary::MMDocumentary(ofstream& ofst) {
+  ofst << endl << "Documentary and Documentary" << endl;
+}
 

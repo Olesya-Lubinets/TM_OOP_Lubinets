@@ -21,6 +21,10 @@ class Movie {
   void OutCommon(ofstream& ofst);
   bool InCommon(ifstream& ifst);
   virtual void OutGroup(ofstream& ofst) { ofst << endl; }
+  virtual void MultiMethod(Movie* other, ofstream& ofst) = 0;
+  virtual void MMCartoon(ofstream& ofst) = 0;
+  virtual void MMFiction(ofstream& ofst) = 0;
+  virtual void MMDocumentary(ofstream& ofst) = 0;
 
  protected:
   string title_;

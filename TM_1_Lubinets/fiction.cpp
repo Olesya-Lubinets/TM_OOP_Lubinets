@@ -15,6 +15,22 @@ void Fiction::Out(ofstream& ofst) {
     OutCommon(ofst);
 }
 
+void Fiction::MultiMethod(Movie* other, ofstream& ofst) {
+  other->MMFiction(ofst);
+}
+
+void Fiction::MMCartoon(ofstream& ofst) {
+  ofst << endl << "Cartoon and Fiction" << endl;
+}
+
+void Fiction::MMFiction(ofstream& ofst) {
+  ofst << endl << "Fiction and Fiction" << endl;
+}
+
+void Fiction::MMDocumentary(ofstream& ofst) {
+  ofst << endl << "Documentary and Fiction" << endl;
+}
+
 
 
 

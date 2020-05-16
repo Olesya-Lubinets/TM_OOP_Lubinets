@@ -15,6 +15,10 @@ class Fiction : public Movie {
   void Out(ofstream& ofst);  // Вывод
   Fiction() { director_ = "Incorrect name!"; }
   void OutGroup(ofstream& ofst) { Out(ofst); }
+  void MultiMethod(Movie* other, ofstream& ofst);
+  void MMCartoon(ofstream& ofst);
+  void MMFiction(ofstream& ofst);
+  void MMDocumentary(ofstream& ofst);
 
  protected:
   string director_;

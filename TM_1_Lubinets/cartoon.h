@@ -20,6 +20,10 @@ class Cartoon : public Movie {
    bool InData(ifstream& ifst);
    void Out(ofstream& ofst);
    void OutCartoon(ofstream& ofst) { Out(ofst); }
+   void MultiMethod(Movie* other, ofstream& ofst);
+   void MMCartoon(ofstream& ofst) ;
+   void MMFiction(ofstream& ofst) ;
+   void MMDocumentary(ofstream& ofst) ;
 
   protected:
    WayCreate way_;

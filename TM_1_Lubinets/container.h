@@ -17,6 +17,7 @@ class Container {
   ~Container() { Clear(); }  // Утилизация контейнера
   void OutCartoon(ofstream& ofst);
   void OutFilter(ofstream& ofst);
+  void MultiMethod(ofstream& ofst);
 
  protected:
   int len_;  // Текущая длина

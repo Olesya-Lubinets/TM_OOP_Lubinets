@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
     c.Out(ofst);
     c.OutCartoon(ofst);
     c.OutFilter(ofst);
+    c.MultiMethod(ofst);
     c.Clear();
     ofst << endl<<"Empty container. " << endl;
     cout << "Stop" << endl;

@@ -14,6 +14,10 @@ class Documentary : public Movie {
   bool InData(ifstream& ifst);
   void Out(ofstream& ofst);
   void OutGroup(ofstream& ofst) { Out(ofst); }
+  void MultiMethod(Movie* other, ofstream& ofst);
+  void MMCartoon(ofstream& ofst);
+  void MMFiction(ofstream& ofst);
+  void MMDocumentary(ofstream& ofst);
 
  protected:
   int year_release_;
