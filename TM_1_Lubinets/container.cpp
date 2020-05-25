@@ -71,7 +71,9 @@ void Container::Clear() {
 void Container::MultiMethod(ofstream& ofst) {
   ofst << "Multimethod." << endl;
   for (int i = 0; i < len_ - 1; i++) {
-    for (int j = i + 1; j < len_; j++) {
+    if ((cont_[i]) == nullptr) continue;
+    for (int j = i + 1; j < len_; j++) {  
+      if ((cont_[j]) == nullptr) continue;
       cont_[i]->MultiMethod(cont_[j], ofst);
       ofst << endl;
       cont_[i]->Out(ofst);

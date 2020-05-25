@@ -16,6 +16,11 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     ofstream ofst(argv[2]);
+    if (!ofst.is_open()){
+        cout << "No output file found or could not open!" << endl;
+        system("pause");
+        return 1;
+    }
     cout << "Start" << endl;
     Container c;
     c.In(ifst);
