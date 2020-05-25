@@ -21,6 +21,8 @@ using namespace std;
 
 namespace Test
 {
+	
+	std::string project_str = "C:\\Users\\Олеся\\source\\repos\\TM_1_FUN_Lubinets\\Test\\";
 	TEST_CLASS(Test)
 	{
 	public:
@@ -28,7 +30,7 @@ namespace Test
 		//класс cartoon
 			TEST_METHOD(cartoon_input)
 			{
-				ifstream fin("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\in_cartoon.txt");				
+				ifstream fin(project_str + "in_cartoon.txt");				
 				cartoon actual;
 				actual.InData(fin);
 				cartoon expected;
@@ -42,14 +44,14 @@ namespace Test
 			}
 			TEST_METHOD(cartoon_output)
 			{
-				ofstream ofst("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_cartoon.txt");
+				ofstream ofst(project_str + "out_cartoon.txt");
 				cartoon car;
 				car.set_country("Russia");
 				car.set_title("Title");
 				car.set_way(cartoon::Way_create::DRAWN);
 				car.Out(ofst);
-				ifstream fin1("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_cartoon_expected.txt");
-				ifstream fin2("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_cartoon.txt");
+				ifstream fin1(project_str + "out_cartoon_expected.txt");
+				ifstream fin2(project_str + "out_cartoon.txt");
 				string expected;
 				getline(fin1, expected, '\0');
 				string actual;
@@ -60,7 +62,7 @@ namespace Test
 			//класс fiction
 			TEST_METHOD(fiction_input)
 			{
-				ifstream fin("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\in_fiction.txt");
+				ifstream fin(project_str + "in_fiction.txt");
 				fiction actual;
 				actual.InData(fin);
 				fiction expected;
@@ -74,14 +76,14 @@ namespace Test
 			}
 			TEST_METHOD(fiction_output)
 			{
-				ofstream ofst("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_fiction.txt");
+				ofstream ofst(project_str + "out_fiction.txt");
 				fiction car;
 				car.set_country("Russia");
 				car.set_title("Title");
 				car.set_director("Ivanov");
 				car.Out(ofst);
-				ifstream fin1("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_fiction_expected.txt");
-				ifstream fin2("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_fiction.txt");
+				ifstream fin1(project_str + "out_fiction_expected.txt");
+				ifstream fin2(project_str + "out_fiction.txt");
 				string expected;
 				getline(fin1, expected, '\0');
 				string actual;
@@ -91,7 +93,7 @@ namespace Test
 			//класс documentary
 			TEST_METHOD(documentary_input)
 			{
-				ifstream fin("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\in_documentary.txt");
+				ifstream fin(project_str + "in_documentary.txt");
 				documentary actual;
 				actual.InData(fin);
 				documentary expected;
@@ -104,14 +106,14 @@ namespace Test
 			}			
 			TEST_METHOD(documentary_output)
 			{
-				ofstream ofst("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_documentary.txt");
+				ofstream ofst(project_str + "out_documentary.txt");
 				documentary car;
 				car.set_country("Russia");
 				car.set_title("Title");
 				car.set_year(2020);
 				car.Out(ofst);
-				ifstream fin1("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_documentary_expected.txt");
-				ifstream fin2("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\out_documentary.txt");
+				ifstream fin1(project_str + "out_documentary_expected.txt");
+				ifstream fin2(project_str + "out_documentary.txt");
 				string expected;
 				getline(fin1, expected, '\0');
 				string actual;
@@ -140,14 +142,14 @@ namespace Test
 			//Контрейнер
 			TEST_METHOD(container_output_test)
 			{
-				ifstream fin("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_in.txt");
-				ofstream fout("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out.txt");
+				ifstream fin(project_str + "\container_in.txt");
+				ofstream fout(project_str + "container_out.txt");
 				container mas;
 				mas.In(fin);
 				mas.Out(fout);
 				fout.close();
-				ifstream fin1("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out_expected.txt");
-				ifstream fin2("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out.txt");
+				ifstream fin1(project_str + "container_out_expected.txt");
+				ifstream fin2(project_str + "container_out.txt");
 				string expected;
 				getline(fin1, expected, '\0');
 				string actual;
@@ -156,14 +158,14 @@ namespace Test
 			}
 			TEST_METHOD(container_filter_test)
 			{
-				ifstream fin("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_in.txt");
-				ofstream fout("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out_filter.txt");
+				ifstream fin(project_str + "container_in.txt");
+				ofstream fout(project_str + "container_out_filter.txt");
 				container mas;				
 				mas.In(fin);
 				mas.Out_cartoon(fout);
 				fout.close();
-				ifstream fin1("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out_filer_expected.txt");
-				ifstream fin2("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out_filter.txt");
+				ifstream fin1(project_str + "container_out_filer_expected.txt");
+				ifstream fin2(project_str + "container_out_filter.txt");
 				string expected;
 				getline(fin1, expected, '\0');
 				string actual;
@@ -172,15 +174,15 @@ namespace Test
 			}
 			TEST_METHOD(container_sort_test)
 			{
-				ifstream fin("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_in.txt");
-				ofstream fout("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out_sort.txt");
+				ifstream fin(project_str + "container_in.txt");
+				ofstream fout(project_str + "container_out_sort.txt");
 				container mas;				
 				mas.In(fin);
 				mas.Sort();
 				mas.Out(fout);
 				fout.close();
-				ifstream fin1("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out_sort_expected.txt");
-				ifstream fin2("C:\\Users\\Олеся\\source\\repos\\TM_1_Lubinets\\Test\\container_out_sort.txt");
+				ifstream fin1(project_str + "container_out_sort_expected.txt");
+				ifstream fin2(project_str + "container_out_sort.txt");
 				string expected;
 				getline(fin1, expected, '\0');
 				string actual;
